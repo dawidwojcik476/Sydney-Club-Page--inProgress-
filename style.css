@@ -1,0 +1,490 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+
+}
+
+.width {
+    max-width: 1600px;
+    padding: 0 80px;
+    margin: auto;
+    transition: all .5s ease-in-out;
+
+}
+
+/*navigation*/
+
+.logo {
+    width: 250px;
+    cursor: pointer;
+    margin-left: 90px;
+    transform: translateY(-13vh);
+    transition: all .5s ease;
+}
+
+.logo.sticky {
+    transform: translateY(0);
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    padding: 30px 0px;
+    transition: all .5s ease-in-out;
+    z-index: 1000;
+
+}
+
+.navbar.sticky {
+    padding: 0px 0px;
+    background-color: rgba(0, 0, 0, 0.801);
+    box-shadow: 0px 0px 30px black;
+
+}
+
+.navbar .width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .mainMenu {
+    display: flex;
+    flex-flow: column;
+    position: fixed;
+    left: 30px;
+    top: 25%;
+    transform: translate(-470%, -50%);
+    transition: all .5s ease-in-out;
+}
+
+.mainMenu.open {
+    transform: translate(0, -50%);
+}
+
+.navbar .mainMenu li {
+    list-style: none;
+    display: flex;
+    margin: 50px;
+}
+
+
+.navbar .mainMenu li a {
+    color: white;
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.mainMenu li a:hover {
+    color: #e2c939;
+}
+
+.mainMenu .menusocials {
+    color: white;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.mainMenu .socials i:hover {
+    color: #e2c939;
+}
+
+.mainMenu .fab {
+    font-size: 24px;
+    margin-right: 13px;
+}
+
+
+/* background */
+
+.mainMenu .background {
+    background-color: transparent;
+}
+
+.mainMenu .background::after {
+    content: '';
+    position: absolute;
+    width: 350vh;
+    height: 150vh;
+    transform: translate(-5vh, -50vh);
+    background-color: rgba(0, 0, 0, 0.952);
+    z-index: -1;
+    clip-path: polygon(25% 0%, 0 50%, 0 0);
+}
+
+
+
+/* burger menu */
+
+
+
+.menuBtn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    z-index: 2;
+    right: 8%;
+
+}
+
+.menuBurger {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+
+
+}
+
+.menuBurger::before,
+.menuBurger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+
+.menuBurger::before {
+    transform: translateY(-14px);
+}
+
+.menuBurger::after {
+    transform: translateY(14px);
+}
+
+.menuBtn.open .menuBurger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menuBtn.open .menuBurger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menuBtn.open .menuBurger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+
+
+
+/* contact button */
+
+nav .contact {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 4px;
+    color: #e2c939;
+    transition: 0.3s;
+    overflow: hidden;
+    text-decoration: none;
+    font-style: normal;
+    left: 10%;
+    transition: all .5s ease-in-out;
+
+}
+
+.contact.sticky {
+    font-size: 20px;
+}
+
+.contact:hover {
+    color: black;
+    background-color: #e2c939;
+    box-shadow: 0 0 5px #e2c939, 0 0 20px #e2c939, 0 0 40px #e2c939;
+    transition-delay: 1s;
+}
+
+a span {
+    position: absolute;
+    display: block;
+}
+
+a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #e2c939);
+}
+
+a:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #e2c939);
+}
+
+a:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #e2c939);
+}
+
+a:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #e2c939);
+}
+
+a:hover span:nth-child(4) {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
+
+
+
+/* main banner  */
+
+.mainBanner {
+    display: flex;
+    background-size: 100vw;
+    height: 100vh;
+    min-height: 500px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mainBanner .headerbgc {
+    background: url("images/background3.png") no-repeat center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-size: 100vw;
+    position: absolute;
+    z-index: -1212;
+}
+
+
+
+.mainBanner .biglogo img {
+    position: relative;
+    top: 15vh;
+    width: 28vw;
+    height: 27vh;
+    box-shadow: 0px 0px 0px #e2c939;
+}
+
+.mainBanner .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+
+
+}
+
+.mainBanner .container .headertext {
+    position: relative;
+    top: 19vh;
+
+}
+
+.mainBanner .container h1 {
+    font-size: 50px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+
+.container h1 span {
+    color: #e2c939;
+}
+
+.mainBanner .buttons {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 18vh;
+
+}
+
+
+.mainBanner .container a {
+    position: relative;
+    padding: 25px 25px;
+    text-transform: uppercase;
+    font-size: 28px;
+    letter-spacing: 5px;
+    color: #e2c939;
+    overflow: hidden;
+    border: 2px #e2c939 solid;
+    box-shadow: 0px 0px 0px #e2c939;
+    transition: all .4s ease-in-out;
+    top: 80px;
+}
+
+.upcoming-event-btn {
+    left: 50px;
+}
+
+.order-btn {
+    right: 50px;
+}
+
+.mainBanner .container a:hover {
+    box-shadow: 0px 0px 25px #e2c939;
+}
+
+/* about us */
+
+
+.aboutus {
+    display: flex;
+    background-color: black;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+
+.aboutus .text {
+    color: white;
+    width: 80vh;
+    margin-left: 20px;
+    transform: translate(50px, 50px);
+    font-weight: 100;
+}
+
+.aboutus .text h1 {
+    font-size: 50px;
+    font-weight: 200;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.aboutus span {
+    font-size: 25px;
+    font-weight: w00;
+    line-height: 40px;
+    display: inline-block;
+
+}
+
+.aboutus strong {
+    margin-top: 30px;
+    color: #e2c939;
+    display: inline-block;
+    font-weight: 200;
+}
+
+/* socials */
+
+.socials {
+    margin-top: 50px;
+    color: white;
+    height: 35vh;
+    width: 100%;
+    background: url('images/background2.png') no-repeat center;
+    background-size: 100vw;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.socials h1 {
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    transform: translateY(-8vh);
+
+}
+
+.socials .buttons {
+    transform: translateY(3vh);
+    display: flex;
+}
+
+.socials .buttons a {
+    padding: 25px 25px;
+    text-transform: uppercase;
+    font-size: 28px;
+    letter-spacing: 5px;
+    color: #e2c939;
+    border: 2px #e2c939 solid;
+    box-shadow: 0px 0px 0px #e2c939;
+    transition: all .4s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
+    margin: 30px;
+}
+
+.socials .buttons a:hover {
+    box-shadow: 0px 0px 25px #e2c939;
+}
+
+.socials .buttons a i {
+    padding-left: 10px;
+}
+
+/* events */
+
+.events {
+    background-color: black;
+    margin-top: 50px;
+
+}
+
+.events .eventsimg {
+    display: flex;
+    justify-content: space-around;
+}
+
+.events .eventsimg img {
+    height: 80vh;
+}
