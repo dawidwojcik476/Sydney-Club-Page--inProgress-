@@ -396,19 +396,20 @@ a:hover span:nth-child(4) {
     width: 80vh;
     margin-left: 20px;
     transform: translate(50px, 50px);
-    font-weight: 100;
+    font-weight: 200;
 }
 
 .aboutus .text h1 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 200;
-    letter-spacing: 3px;
     text-transform: uppercase;
+    letter-spacing: 3px;
+
 }
 
 .aboutus span {
     font-size: 25px;
-    font-weight: w00;
+    font-weight: 200;
     line-height: 40px;
     display: inline-block;
 
@@ -441,8 +442,11 @@ a:hover span:nth-child(4) {
 .socials h1 {
     position: absolute;
     font-family: 'Montserrat', sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     transform: translateY(-8vh);
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 6px;
 
 }
 
@@ -477,6 +481,8 @@ a:hover span:nth-child(4) {
 .events {
     background-color: black;
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
 
 }
 
@@ -487,4 +493,41 @@ a:hover span:nth-child(4) {
 
 .events .eventsimg img {
     height: 80vh;
+}
+
+.events h1 {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 5vh;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+/* reservations */
+
+.reserv h1 {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: center;
+    font-size: 60px;
+    color: white;
+    margin-bottom: 5vh;
+    font-weight: 200;
+    margin: 5vh 0 5vh 0;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+}
+
+.boxes img {
+    width: 45vw;
+
 }
