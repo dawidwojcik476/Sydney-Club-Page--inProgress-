@@ -3,12 +3,20 @@
     box-sizing: border-box;
     padding: 0;
     text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
     background-color: black;
     overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
 
+}
+
+section {
+    scroll-snap-align: center;
 }
 
 .width {
@@ -37,7 +45,6 @@ body {
     position: fixed;
     width: 100%;
     background-color: transparent;
-    font-family: 'Montserrat', sans-serif;
     padding: 30px 0px;
     transition: all .5s ease-in-out;
     z-index: 1000;
@@ -385,7 +392,7 @@ a:hover span:nth-child(4) {
 .aboutus {
     display: flex;
     background-color: black;
-    font-family: 'Montserrat', sans-serif;
+
     justify-content: center;
     margin-top: 50px;
 }
@@ -492,12 +499,19 @@ a:hover span:nth-child(4) {
 }
 
 .events .eventsimg img {
-    height: 80vh;
+    height: 75vh;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.events .eventsimg img:hover {
+    opacity: 1.2;
+    cursor: pointer;
+    box-shadow: 0px 0px 25px #e2c939;
 }
 
 .events h1 {
     display: flex;
-    font-family: 'Montserrat', sans-serif;
     justify-content: center;
     font-size: 40px;
     color: white;
@@ -509,11 +523,10 @@ a:hover span:nth-child(4) {
 
 /* reservations */
 
-.reserv h1 {
+.reserv h2 {
     display: flex;
-    font-family: 'Montserrat', sans-serif;
     justify-content: center;
-    font-size: 60px;
+    font-size: 50px;
     color: white;
     margin-bottom: 5vh;
     font-weight: 200;
@@ -528,6 +541,140 @@ a:hover span:nth-child(4) {
 }
 
 .boxes img {
-    width: 45vw;
+    width: 33vw;
+}
 
+.boxes img:nth-of-type(2) {
+    transform: translateX(-10%);
+}
+
+.reservcontact {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-weight: 200;
+    font-family: 'Montserrat', sans-serif;
+    transform: translateX(-10%);
+
+}
+
+
+.reservcontact ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.reservcontact ul li {
+    font-size: 25px;
+    line-height: 45px;
+    text-decoration: none;
+    list-style-type: none;
+    letter-spacing: 1px;
+}
+
+.reservcontact h3 {
+    font-weight: 200;
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: #e2c939;
+    margin-bottom: 5px;
+}
+
+/* location */
+
+.location {
+    display: flex;
+    justify-content: space-around;
+    height: 70vh;
+    margin-top: 5%;
+}
+
+.location div {
+    width: 40vw;
+}
+
+.location .map {
+    filter: grayscale(90%) invert(92%) contrast(83%);
+    opacity: 0.8;
+    transition: all 0.5s ease;
+}
+
+.location .map:hover {
+    opacity: 1.5;
+}
+
+.location .adress {
+    color: white;
+    font-size: 25px;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.location .adress div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    margin: 10% 0 10% 0;
+}
+
+.location .adress div:nth-of-type(2) {
+    font-size: 20px;
+}
+
+.location .adress div:nth-of-type(2) span {
+    color: #e2c939;
+}
+
+.location .adress div span:nth-of-type(1) {
+    color: #e2c939;
+}
+
+.location .adress div:nth-of-type(3) ul li {
+    text-decoration: none;
+    list-style-type: none;
+    letter-spacing: 3px;
+    line-height: 50px;
+}
+
+.adress div:nth-of-type(3) {
+    margin-top: 8%;
+}
+
+.adress div:nth-of-type(3) ul li i {
+    margin: 5px;
+    transition: all .5s ease;
+}
+
+.adress div:nth-of-type(3) ul li i:hover {
+    color: #e2c939;
+    cursor: pointer;
+}
+
+/* footer */
+
+footer {
+    background-color: rgb(32, 32, 32);
+    color: white;
+    height: 5vh;
+    margin-top: 10px;
+
+}
+
+footer h2 {
+    line-height: 5vh;
+    text-align: center;
+    font-weight: 200;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+footer h2 span {
+    color: #e2c939;
 }

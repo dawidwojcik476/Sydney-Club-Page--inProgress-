@@ -19,7 +19,9 @@
 </head>
 
 <body>
+
     <header>
+
         <nav class="navbar">
             <div class="width">
                 <div class="menuBtn">
@@ -36,10 +38,11 @@
 
                 <ul class="mainMenu">
                     <div class="background">
-                        <li><a href="#">Wydarzenia</a></li>
-                        <li><a href="#">Rezerwacja</a></li>
-                        <li><a href="#">O nas</a></li>
-                        <li><a href="#">Lokalizacja</a></li>
+                        <li><a href="#aboutus">O nas</a></li>
+                        <li><a href="#events">Wydarzenia</a></li>
+                        <li><a href="#reserv">Rezerwacja</a></li>
+
+                        <li><a href="#location">Lokalizacja</a></li>
                         <a class="menusocials" href="#">
                             <i class="fab fa-facebook"></i>
                             <i class="fab fa-instagram"></i>
@@ -66,9 +69,10 @@
             </div>
             <div class="headerbgc"></div>
         </section>
+
     </header>
 
-    <section class="aboutus">
+    <section id="aboutus" class="aboutus">
         <img src="images/Onas.png" alt="">
         <div class="text">
             <h1>Poznaj <strong>nas</strong>!</h1>
@@ -96,7 +100,8 @@
             <a href="#">facebook<i class="fab fa-facebook"></i></a>
         </div>
     </section>
-    <section class="events">
+
+    <section id="events" class="events">
         <h1>Nadchodzące wydarzenia</h1>
         <div class="eventsimg">
             <img src="images/event1.jpg" alt="">
@@ -105,13 +110,61 @@
         </div>
     </section>
 
-    <section class="reserv">
-        <h1>Rezerwacje</h1>
+    <section id="reserv" class="reserv">
+        <h2> Rezerwacje</h2>
         <div class="boxes">
             <img src="images/sala1-8-1024x1024.png" alt="loża Klub Sydney">
             <img src="images/sala2-5-1024x1024.png" alt="druga loża Klub Sydney">
+            <div class="reservcontact">
+                <div>
+                    <h3> Kontakt do rezerwacji</h3>
+                    <ul>
+                        <li> piotrsobilo@wp.pl </li>
+                        <li> +48 15 87 01 220 </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3> Koszt rezerwacji</h3>
+                    <ul>
+                        <li>Loża 5 osób - 5 zł</li>
+                        <li>Loża 8 osób - 10 zł</li>
+                        <li>Loża 15 osób - 15 zł</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
+
+    <section id="location" class="location">
+        <div><iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.3140035400424!2d22.183023215734252!3d50.52832967948621!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473d2a919b7802a5%3A0x2c0a264cee255aaf!2sKlub%20Sydney!5e0!3m2!1spl!2spl!4v1615385530167!5m2!1spl!2spl"
+                width="800" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+        <div class="adress">
+            <div>
+                <span>Adres klubu</span>
+                <span>Zarzecze, ul. ługowa Boczna 11</span>
+            </div>
+            <div>
+                Lokal czynny w <span>soboty</span> od godziny <span>20:00</span> do <span>4:00</span>
+            </div>
+            <div>
+                <span>Kontakt</span>
+                <ul>
+                    <li> piotrsobilo@wp.pl </li>
+                    <li> +48 15 87 01 220 </li>
+                    <li> <i class="fab fa-instagram"></i>
+                        <i class="fab fa-facebook"></i>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h2>Wszelkie prawa zastrzeżone © 2021 | <span>Sydney Klub Zarzecze</span> </h2>
+    </footer>
+
     <script src="js/main.js"></script>
     <script type="text/javascript" src="js/vanilla-tilt.js"></script>
     <script type="text/javascript">
@@ -120,6 +173,8 @@
             speed: 50,
         });
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery.js"></script>
 
 </body>
 
