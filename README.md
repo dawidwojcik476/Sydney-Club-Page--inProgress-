@@ -1,5 +1,7 @@
 # Sydney-Club-Page--inProgress-
 
+The project is in progress.
+
 
 [Link to demo](https://dawidwojcik476.github.io/Sydney-Club-Page--inProgress-/)
 
